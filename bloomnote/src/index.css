@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'iOS Bangla';
+  src: url('/src/assets/fonts/iOS Bangla Font.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --color-primary: #A8DAB9;
+  --color-mint: #D0F4DE;
+  --color-pastel-blue: #E1F5FE;
+  --color-pastel-pink: #FCE4EC;
+  --color-pastel-yellow: #FFF9C4;
+  --color-pastel-mint: #E8F5E9;
+  --color-bg-soft: #F4FAF6;
+  --color-text-main: #2D3436;
+  --color-text-muted: #636E72;
+  
+  --radius-xl: 20px;
+  --radius-2xl: 24px;
+  --radius-3xl: 30px;
+  --radius-4xl: 40px;
+
+  --font-sans: 'Poppins', 'iOS Bangla', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-bangla: 'iOS Bangla', sans-serif;
+  
+  --shadow-sleek: 0 10px 25px rgba(168, 218, 185, 0.15);
+  --shadow-nav: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+@layer base {
+  body {
+    @apply bg-bg-soft text-text-main font-sans antialiased;
+    overflow-x: hidden;
+    user-select: none; /* Disables copying */
+  }
+
+  /* Allow selection specifically in interactive/note areas */
+  textarea, 
+  input, 
+  [contenteditable="true"],
+  .note-content,
+  .selectable {
+    user-select: text !important;
+  }
+}
+
+.custom-shadow {
+  box-shadow: var(--shadow-sleek);
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+}
