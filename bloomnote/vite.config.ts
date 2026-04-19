@@ -22,3 +22,6 @@ export default defineConfig(({mode}) => {
     },
   };
 });
+  plugins: [react()],
+  base: '/My-Note-Pad/', // আপনার রিপোজিটরির নাম এখানে দিন
+})
